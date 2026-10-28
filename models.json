@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "updated": "2026-10-28",
+  "models": [
+    {
+      "name": "qwen2.5-0.5b",
+      "author": "Qwen",
+      "url": "https://www.modelscope.cn/models/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/master/qwen2.5-0.5b-instruct-q4_k_m.gguf",
+      "quant": "Q4_K_M",
+      "context": 32768,
+      "size": 0,
+      "sha256": "",
+      "description": "Qwen2.5 0.5B Instruct，Q4_K_M，适合双机分片与低配验证。"
+    }
+  ]
+}
