@@ -44,7 +44,7 @@ https://raw.githubusercontent.com/ShieldDog-ACE/maio-market/main/models.json
    }
    ```
 
-3. 发 PR。CI 会做结构校验；维护者看一眼没大问题就合并 —— **合并即上架**。
+3. 发 PR。维护者会跑结构校验（`scripts/validate.py`），看一眼没大问题就合并 —— **合并即上架**。
 
 约束：
 
@@ -79,7 +79,7 @@ https://raw.githubusercontent.com/ShieldDog-ACE/maio-market/main/models.json
 python3 scripts/validate.py
 ```
 
-CI 在每次 PR 上跑同一脚本。校验内容：JSON 可解析、schema 版本、必填字段、
+维护者或 CI 可跑同一脚本。校验内容：JSON 可解析、schema 版本、必填字段、
 名称唯一与格式、GitHub/HTTPS URL 形状、数组元素类型。
 
 ## 目录
@@ -89,8 +89,7 @@ plugins.json                 # 插件市场数据库
 models.json                  # 模型市场数据库
 schema/plugins.schema.json   # 结构说明（供人和工具参考）
 schema/models.schema.json
-scripts/validate.py          # CI 与本地共用校验器
-.github/workflows/validate.yml
+scripts/validate.py          # 本地/CI 共用校验器
 ```
 
 ## License
