@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "updated": "2026-10-28",
+  "plugins": [
+    {
+      "name": "hello",
+      "author": "ShieldDog-ACE",
+      "repo": "https://github.com/ShieldDog-ACE/maio-plugin-hello",
+      "description": "最小示例插件：清单、脚本入口与 Web 面板占位。",
+      "tags": ["example", "hello"]
+    }
+  ]
+}
