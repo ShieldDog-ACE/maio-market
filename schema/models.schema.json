@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ShieldDog-ACE/maio-market/schema/models.schema.json",
+  "title": "maio model market",
+  "type": "object",
+  "required": ["schema", "models"],
+  "additionalProperties": true,
+  "properties": {
+    "schema": { "const": 1 },
+    "updated": { "type": "string" },
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "author", "url", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64,
+            "pattern": "^[a-z0-9][a-z0-9._-]*$"
+          },
+          "author": { "type": "string", "minLength": 1, "maxLength": 64 },
+          "url": { "type": "string", "pattern": "^https://" },
+          "quant": { "type": "string", "maxLength": 24 },
+          "context": { "type": "integer", "minimum": 0 },
+          "size": { "type": "integer", "minimum": 0 },
+          "sha256": { "type": "string", "pattern": "^$|^[a-f0-9]{64}$" },
+          "description": { "type": "string", "minLength": 1, "maxLength": 280 }
+        }
+      }
+    }
+  }
+}
